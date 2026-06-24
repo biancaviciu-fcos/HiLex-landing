@@ -22,6 +22,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -29,6 +30,7 @@ body {
     linear-gradient(180deg, #ffffff 0, #ffffff 240px, var(--soft) 760px);
   color: var(--ink);
   margin: 0;
+  overflow-x: hidden;
 }
 
 a {
@@ -1052,27 +1054,56 @@ li::before {
   }
 
   .site-header {
+    padding: 16px 20px;
     position: static;
   }
 
   .hero {
-    padding-top: 42px;
+    gap: 26px;
+    margin-top: 22px;
+    max-width: calc(100vw - 36px);
+    overflow: visible;
+    padding: 0 0 24px;
   }
 
   h1 {
-    font-size: clamp(31px, 9vw, 42px);
+    font-size: clamp(34px, 10vw, 43px);
+    line-height: 0.95;
+    max-width: 100%;
   }
 
   h1 span {
-    white-space: normal;
+    white-space: nowrap;
   }
 
   .lead {
-    font-size: 18px;
+    font-size: 17px;
+    line-height: 1.38;
+    max-width: 100%;
+  }
+
+  .problem-grid {
+    gap: 12px;
+    max-width: 100%;
   }
 
   .problem-grid article {
     min-height: auto;
+    width: 100%;
+  }
+
+  .problem-grid strong {
+    font-size: 15px;
+  }
+
+  .member-note {
+    max-width: 100%;
+    overflow: hidden;
+    overflow-wrap: anywhere;
+  }
+
+  .actions {
+    max-width: 100%;
   }
 
   .trust-strip {
@@ -1092,7 +1123,19 @@ li::before {
 
   .button,
   .header-cta {
+    max-width: 100%;
+    text-align: center;
     width: 100%;
+  }
+
+  .media-card {
+    aspect-ratio: 1418 / 1132;
+    width: 100%;
+  }
+
+  .media-card,
+  .media-image {
+    min-height: 0;
   }
 
   .floating-note {
@@ -1140,5 +1183,19 @@ li::before {
     display: block;
     font-size: 28px;
     margin-top: 8px;
+  }
+}
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: clamp(31px, 9.2vw, 36px);
+  }
+
+  .kicker {
+    font-size: 10px;
+  }
+
+  .lead {
+    font-size: 16px;
   }
 }
