@@ -169,19 +169,25 @@
         <p class="muted">Situații reale explicate simplu, astfel încât să știi exact ce ai de făcut.</p>
         <div class="video-grid">
           <article class="video-card">
-            <div class="video-thumb police"><span>▶</span><b>Doar membri</b></div>
+            <button class="video-thumb police video-preview" type="button" aria-haspopup="dialog" aria-controls="member-modal">
+              <span>▶</span><b>Doar membri</b>
+            </button>
             <h3>Ce faci dacă te contactează poliția</h3>
             <p>Afli care sunt primii pași corecți, ce drepturi ai și ce trebuie să eviți pentru a nu complica situația înainte de a primi asistență juridică.</p>
             <small>Înțelegi exact ce să spui, ce să eviți și cum să îți protejezi drepturile.</small>
           </article>
           <article class="video-card">
-            <div class="video-thumb citizenship"><span>▶</span><b>Doar membri</b></div>
+            <button class="video-thumb citizenship video-preview" type="button" aria-haspopup="dialog" aria-controls="member-modal">
+              <span>▶</span><b>Doar membri</b>
+            </button>
             <h3>Ce faci dacă vrei să aplici pentru British Citizenship</h3>
             <p>Procesul poate părea complicat, mai ales când nu știi exact ce documente sunt necesare sau dacă îndeplinești toate condițiile.</p>
             <small>Știi exact ce ai nevoie, ce documente să pregătești și cum decurge procesul.</small>
           </article>
           <article class="video-card">
-            <div class="video-thumb protection"><span>▶</span><b>Doar membri</b></div>
+            <button class="video-thumb protection video-preview" type="button" aria-haspopup="dialog" aria-controls="member-modal">
+              <span>▶</span><b>Doar membri</b>
+            </button>
             <h3>Ce faci dacă ai nevoie de Non-Molestation Order</h3>
             <p>În situațiile de abuz, amenințare sau hărțuire, este important să acționezi rapid și corect.</p>
             <small>Primești claritate și îndrumare pas cu pas pentru a te proteja pe tine și familia ta.</small>
@@ -294,5 +300,61 @@
         <a class="button primary" href="#pachete">Activează Membershipul!</a>
       </div>
     </footer>
+
+    <div class="modal-overlay" id="member-modal" role="dialog" aria-modal="true" aria-labelledby="member-modal-title" aria-hidden="true">
+      <div class="member-modal" role="document">
+        <button class="modal-close" type="button" aria-label="Închide">×</button>
+        <span class="modal-icon" aria-hidden="true">▶</span>
+        <p class="mini-label">Conținut exclusiv</p>
+        <h2 id="member-modal-title">Acest video este disponibil în platforma membrilor.</h2>
+        <p>Activează Membershipul HILEX ca să ai acces la explicații practice, ghiduri și resurse create pentru situații reale din UK.</p>
+        <div class="modal-actions">
+          <a class="button primary modal-cta" href="#pachete">Vezi pachetele de Membership</a>
+          <button class="button secondary modal-secondary" type="button">Revin la pagină</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const memberModal = document.querySelector("#member-modal");
+      const modalCloseButtons = memberModal.querySelectorAll(".modal-close, .modal-secondary, .modal-cta");
+      const videoPreviewButtons = document.querySelectorAll(".video-preview");
+      let lastFocusedElement = null;
+
+      function openMemberModal(event) {
+        lastFocusedElement = event.currentTarget;
+        memberModal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("modal-open");
+        memberModal.querySelector(".modal-close").focus();
+      }
+
+      function closeMemberModal() {
+        memberModal.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("modal-open");
+        if (lastFocusedElement) {
+          lastFocusedElement.focus();
+        }
+      }
+
+      videoPreviewButtons.forEach((button) => {
+        button.addEventListener("click", openMemberModal);
+      });
+
+      modalCloseButtons.forEach((button) => {
+        button.addEventListener("click", closeMemberModal);
+      });
+
+      memberModal.addEventListener("click", (event) => {
+        if (event.target === memberModal) {
+          closeMemberModal();
+        }
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && memberModal.getAttribute("aria-hidden") === "false") {
+          closeMemberModal();
+        }
+      });
+    </script>
   </body>
 </html>
