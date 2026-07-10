@@ -81,6 +81,17 @@ nav {
   padding: 11px 15px;
 }
 
+.header-login {
+  border: 1px solid rgba(7, 11, 79, 0.18);
+  border-radius: 8px;
+  color: var(--navy);
+  padding: 10px 14px;
+}
+
+.header-login:hover {
+  background: rgba(7, 11, 79, 0.06);
+}
+
 .hero {
   background: transparent;
   display: grid;
