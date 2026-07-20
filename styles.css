@@ -1361,3 +1361,17 @@ li::before {
     font-size: 16px;
   }
 }
+
+@media (max-width: 390px) {
+  h1 {
+    font-size: clamp(31px, 9.2vw, 36px);
+  }
+
+  .kicker {
+    font-size: 10px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+}
