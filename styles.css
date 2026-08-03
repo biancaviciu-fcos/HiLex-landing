@@ -1042,8 +1042,8 @@ li::before {
 }
 
 .about-hero {
-  margin: 34px auto 0;
-  max-width: min(1280px, calc(100vw - 44px));
+  margin: 26px auto 0;
+  max-width: min(1160px, calc(100vw - 56px));
 }
 
 .about-hero-image {
@@ -1053,10 +1053,10 @@ li::before {
     url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1800&q=80");
   background-position: center;
   background-size: cover;
-  border-radius: 22px;
+  border-radius: 18px;
   display: flex;
-  min-height: 690px;
-  padding: clamp(28px, 5vw, 70px);
+  min-height: 560px;
+  padding: clamp(24px, 4vw, 48px);
   position: relative;
   overflow: hidden;
 }
@@ -1066,17 +1066,17 @@ li::before {
   border-radius: 20px;
   box-shadow: 0 28px 80px rgba(7, 11, 79, 0.26);
   color: var(--white);
-  max-width: 540px;
-  padding: clamp(30px, 4.5vw, 54px);
+  max-width: 500px;
+  padding: clamp(28px, 3.8vw, 44px);
 }
 
 .about-hero-panel h1 {
   color: var(--white);
   font-family: inherit;
-  font-size: clamp(44px, 5vw, 74px);
+  font-size: clamp(40px, 4.4vw, 62px);
   font-weight: 400;
   line-height: 0.94;
-  margin: 12px 0 24px;
+  margin: 10px 0 20px;
   max-width: 100%;
 }
 
@@ -1086,38 +1086,38 @@ li::before {
 
 .about-hero-panel p {
   color: rgba(255, 255, 255, 0.82);
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.42;
 }
 
 .about-panel-line {
   background: var(--pink);
   height: 3px;
-  margin: 24px 0;
+  margin: 20px 0;
   width: 100%;
 }
 
 .about-proof-list {
   display: grid;
-  gap: 20px;
+  gap: 16px;
 }
 
 .about-proof-list article {
   align-items: center;
   display: grid;
-  gap: 18px;
-  grid-template-columns: 58px minmax(0, 1fr);
+  gap: 15px;
+  grid-template-columns: 52px minmax(0, 1fr);
 }
 
 .about-proof-list strong {
   color: var(--white);
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 4px;
 }
 
 .about-proof-list p {
-  font-size: 17px;
+  font-size: 15px;
   margin: 0;
 }
 
@@ -1127,9 +1127,9 @@ li::before {
   border-radius: 8px;
   color: var(--white);
   display: inline-flex;
-  height: 58px;
+  height: 52px;
   justify-content: center;
-  width: 58px;
+  width: 52px;
 }
 
 .about-proof-icon svg,
@@ -1147,8 +1147,8 @@ li::before {
 .about-mission,
 .about-team,
 .about-cta {
-  margin: 42px auto 0;
-  max-width: min(1280px, calc(100vw - 44px));
+  margin: 34px auto 0;
+  max-width: min(1160px, calc(100vw - 56px));
 }
 
 .about-mission {
