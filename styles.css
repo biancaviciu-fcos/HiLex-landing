@@ -1259,6 +1259,117 @@ li::before {
   line-height: 1.55;
 }
 
+.about-expertise {
+  margin: 44px auto 0;
+  max-width: min(1160px, calc(100vw - 56px));
+  padding: 24px 0 0;
+}
+
+.about-expertise-heading {
+  margin: 0 auto 32px;
+  max-width: 840px;
+  text-align: center;
+}
+
+.about-expertise-heading .mini-label {
+  display: inline-flex;
+  position: relative;
+}
+
+.about-expertise-heading .mini-label::after {
+  background: var(--pink);
+  bottom: -10px;
+  content: "";
+  height: 4px;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: 120px;
+}
+
+.about-expertise-heading h2 {
+  color: #050505;
+  font-family: inherit;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 900;
+  line-height: 1.08;
+  margin-top: 24px;
+}
+
+.about-expertise-layout {
+  align-items: center;
+  display: grid;
+  gap: 36px;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(0, 1.45fr);
+}
+
+.about-expertise-copy {
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.52;
+}
+
+.about-expertise-copy p {
+  margin: 0 0 18px;
+}
+
+.about-expertise-copy strong {
+  color: var(--navy);
+  font-weight: 900;
+}
+
+.expertise-link {
+  margin-top: 6px;
+}
+
+.team-card-grid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.team-card {
+  background: #e9e9ee;
+  border-radius: 12px;
+  box-shadow: 0 14px 34px rgba(7, 11, 79, 0.09);
+  overflow: hidden;
+  text-align: center;
+}
+
+.team-card img {
+  aspect-ratio: 4 / 5;
+  border: 3px solid #f1f1f5;
+  border-radius: 12px 12px 0 0;
+  display: block;
+  height: auto;
+  object-fit: cover;
+  object-position: center 18%;
+  width: 100%;
+}
+
+.team-card:nth-child(2) img {
+  object-position: center top;
+}
+
+.team-card div {
+  padding: 12px 10px 15px;
+}
+
+.team-card h3 {
+  color: #26226f;
+  font-size: clamp(18px, 1.6vw, 25px);
+  font-weight: 950;
+  line-height: 0.95;
+}
+
+.team-card p {
+  color: #26226f;
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 850;
+  line-height: 1;
+  margin: 4px 0 0;
+}
+
 .about-support-grid {
   display: grid;
   gap: 18px;
@@ -1452,12 +1563,14 @@ li::before {
   }
 
   .about-values-grid,
-  .about-support-grid {
+  .about-support-grid,
+  .team-card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .about-team,
-  .about-cta {
+  .about-cta,
+  .about-expertise-layout {
     grid-template-columns: 1fr;
   }
 
@@ -1597,12 +1710,14 @@ li::before {
 
   .about-mission,
   .about-team,
+  .about-expertise,
   .about-cta {
     max-width: calc(100vw - 28px);
   }
 
   .about-values-grid,
-  .about-support-grid {
+  .about-support-grid,
+  .team-card-grid {
     grid-template-columns: 1fr;
   }
 
@@ -1632,6 +1747,23 @@ li::before {
     padding-right: 0;
   }
 
+  .about-expertise {
+    margin-top: 34px;
+    padding-top: 8px;
+  }
+
+  .about-expertise-heading {
+    margin-bottom: 26px;
+  }
+
+  .about-expertise-copy {
+    font-size: 16px;
+  }
+
+  .team-card-grid {
+    gap: 14px;
+  }
+
   .about-support-grid article {
     min-height: auto;
   }
@@ -1642,6 +1774,14 @@ li::before {
 
   .about-cta-icon {
     margin: 0 auto;
+  }
+
+  .team-card h3 {
+    font-size: 20px;
+  }
+
+  .team-card p {
+    font-size: 15px;
   }
 
   .trust-strip article {
@@ -1748,5 +1888,9 @@ li::before {
 
   .lead {
     font-size: 16px;
+  }
+
+  .team-card-grid {
+    grid-template-columns: 1fr;
   }
 }
