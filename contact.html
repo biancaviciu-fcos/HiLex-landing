@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ro"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Contact | HiLex</title><meta name="description" content="Contactează echipa HiLex pentru întrebări despre membership, pachete și acces la cont. Scrie-ne prin formular, e-mail sau WhatsApp."><link rel="canonical" href="https://www.hilex.co.uk/contact.html"><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="contact.css"><script src="contact.js" defer></script></head><body class="contact-page"><header class="site-header">
+      <a class="brand" href="index.html">Hi<span>Lex</span></a>
+      <nav>
+        <a href="about.html">Despre noi</a>
+        <a href="index.html#faq">Întrebări frecvente</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a class="header-login" href="https://membersaccess.hilex.co.uk/login">Login membri</a>
+        <a class="header-cta" href="index.html#pachete">Activează Membershipul!</a>
+      </nav>
+    </header><main>
+<section class="contact-hero"><p class="kicker">Suntem aici să te ajutăm</p><h1>Hai să vorbim.</h1><p class="intro">Ai o întrebare despre HiLex sau despre membership? Scrie-ne și te îndrumăm către pasul potrivit.</p></section>
+<section class="contact-layout" aria-label="Contactează HiLex">
+ <div class="contact-details"><h2>Alege cum ne<br>contactezi</h2>
+ <a class="contact-method" href="mailto:enquiries@fcos.co.uk"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 6 9 7 9-7"/></svg></span><span><strong>E-mail</strong>enquiries@fcos.co.uk</span></a>
+ <a class="contact-method" href="https://wa.me/447908790689?text=Bun%C4%83%21%20Am%20o%20%C3%AEntrebare%20despre%20HiLex." target="_blank" rel="noopener noreferrer"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 21l1.9-5.4A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8 7c0 4 3 7 7 8l2-2-3-2-1 1-2-2 1-1-2-3-2 1Z"/></svg></span><span><strong>WhatsApp</strong>Trimite-ne un mesaj</span><span class="method-arrow" aria-hidden="true">→</span></a>
+ <address class="contact-method contact-address"><span class="contact-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><span><strong>Adresă</strong>16 Berkeley Street<br>London, W1J 8DZ</span></address>
+ <p class="contact-note">Pentru o întâlnire, contactează-ne în prealabil.</p></div>
+ <div class="contact-card"><h2>Trimite-ne un mesaj</h2>
+ <form class="contact-form" id="contact-form" action="/api/contact" method="post">
+ <div class="field-row"><div><label for="contact-name">Nume complet</label><input id="contact-name" name="name" autocomplete="name" minlength="2" maxlength="100" required></div><div><label for="contact-email">E-mail</label><input id="contact-email" name="email" type="email" autocomplete="email" maxlength="254" required></div></div>
+ <div><label for="contact-topic">Cu ce te putem ajuta?</label><select id="contact-topic" name="topic" required><option value="" disabled selected>Alege subiectul</option><option>Despre membership</option><option>Alegerea pachetului</option><option>Acces la cont</option><option>Programarea unei consultații</option><option>Altă întrebare</option></select></div>
+ <div><label for="contact-message">Mesajul tău</label><textarea id="contact-message" name="message" minlength="10" maxlength="4000" required aria-describedby="contact-sensitive contact-privacy"></textarea></div>
+ <div class="contact-trap" aria-hidden="true"><label for="contact-website">Website</label><input id="contact-website" name="website" tabindex="-1" autocomplete="off"></div>
+ <p class="form-note" id="contact-sensitive">Te rugăm să nu incluzi documente sau informații sensibile în acest formular.</p>
+ <p class="form-note" id="contact-privacy">Datele tale sunt folosite pentru a răspunde solicitării. Citește <a href="privacy-policy.html">Privacy Policy</a>.</p>
+ <p id="contact-status" class="form-status" role="status" aria-live="polite" tabindex="-1"></p>
+ <button class="contact-submit" type="submit">Trimite mesajul <span aria-hidden="true">→</span></button>
+ <noscript><p>Pentru formular, activează JavaScript sau scrie-ne direct la <a href="mailto:enquiries@fcos.co.uk">enquiries@fcos.co.uk</a>.</p><style>.contact-submit{display:none}</style></noscript>
+ </form></div>
+</section>
+<section class="member-contact" aria-labelledby="member-heading"><div><h2 id="member-heading">Ești deja membru HiLex?</h2><p>Intră în cont pentru resursele și beneficiile membershipului tău.</p></div><a class="button" href="https://membersaccess.hilex.co.uk/login">Intră în cont</a></section>
+</main><footer class="footer" id="contact">
+      <div>
+        <a class="brand" href="index.html">Hi<span>Lex</span></a>
+        <p>Oferim claritate, suport și sprijin juridic real pentru românii din UK.</p>
+      </div>
+      <div>
+        <strong>Linkuri rapide</strong>
+        <a href="contact.html">Contact</a>
+        <a href="about.html">Despre noi</a>
+        <a href="index.html#faq">Întrebări frecvente</a>
+        <a href="https://membersaccess.hilex.co.uk/login">Login membri</a>
+        <a href="terms-and-conditions.html" lang="en">Terms &amp; Conditions</a>
+        <a href="privacy-policy.html" lang="en">Privacy Policy</a>
+      </div>
+      <div class="footer-cta">
+        <h3>Ai nevoie de claritate juridică?</h3>
+        <p>Nu îți explicăm legea. Îți explicăm ce trebuie să faci.</p>
+        <a class="button primary" href="index.html#pachete">Activează Membershipul!</a>
+      </div>
+    </footer></body></html>
