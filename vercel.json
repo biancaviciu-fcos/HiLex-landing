@@ -1,16 +1,22 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "redirects": [
-    {
-      "source": "/contact",
-      "destination": "/contact.html",
-      "permanent": true
-    }
-  ],
+  "redirects": [],
   "rewrites": [
     {
-      "source": "/api/contact",
-      "destination": "https://membersaccess.hilex.co.uk/api/public-contact"
+      "source": "/:path*",
+      "destination": "/index.html"
+    }
+  ],
+  "outputDirectory": "prelaunch",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
     }
   ]
 }

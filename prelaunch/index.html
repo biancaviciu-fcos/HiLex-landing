@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HiLex — Ne vedem pe 28 noiembrie</title>
+<meta name="description" content="Claritate juridică pentru românii din UK. HiLex se lansează pe 28 noiembrie 2026. Resurse juridice în română, cu expertiza Forest & Co.">
+<meta name="theme-color" content="#ffffff">
+<style>
+:root{color-scheme:light;--ink:#02083f;--pink:#bd287f;--muted:#606575}*{box-sizing:border-box}body{margin:0;background:#fff;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}.page{min-height:100svh;max-width:1160px;margin:auto;padding:32px 40px;display:flex;flex-direction:column}header{display:flex;justify-content:space-between;align-items:center;gap:16px}.brand{font-size:34px;font-weight:800;letter-spacing:-1.7px}.brand span{color:var(--pink)}.date{font-size:13px;color:var(--muted)}main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:65px 0 72px}.eyebrow{font-size:12px;font-weight:700;letter-spacing:1.7px;text-transform:uppercase;color:var(--pink);margin:0 0 22px}h1{font-size:clamp(36px,5.5vw,64px);line-height:1.09;letter-spacing:-2px;margin:0;font-weight:750}h1 span{display:block}.intro{font-size:17px;line-height:1.6;color:var(--muted);max-width:480px;margin:24px 0 0}.countdown{margin:34px 0 24px;min-width:174px;padding:21px 34px 22px;border:1px solid #eadce5;border-radius:18px;background:#fdf8fb}.number{font-size:72px;font-weight:750;line-height:1;letter-spacing:-3px;color:var(--pink);font-variant-numeric:tabular-nums}.unit{margin-top:9px;color:var(--muted);font-size:13px}.launch-date{font-weight:650;font-size:17px;margin:0 0 26px}.follow{display:inline-flex;align-items:center;justify-content:center;padding:13px 23px;border-radius:9px;background:var(--pink);color:white;text-decoration:none;font-size:14px;font-weight:650}.follow:hover{background:#a92270}a:focus-visible{outline:3px solid var(--ink);outline-offset:5px}.expertise{font-size:12px;color:var(--muted);margin:18px 0 0}footer{padding-top:22px;border-top:1px solid #eeeef3;display:flex;justify-content:space-between;gap:16px;color:var(--muted);font-size:12px}footer a{color:inherit;text-decoration:none}footer a:hover{text-decoration:underline}.countdown.today{max-width:330px}.today .number{font-size:32px;letter-spacing:-.7px} @media(max-width:600px){.page{padding:23px 22px}header .date{font-size:11px}.brand{font-size:30px}main{padding:50px 0}h1{letter-spacing:-1.3px}.intro{font-size:15px;max-width:320px}.countdown{margin-top:28px}.launch-date{font-size:16px}footer{flex-direction:column;align-items:center;text-align:center;gap:12px}.expertise{font-size:11px}}
+</style>
+</head>
+<body>
+<div class="page">
+<header><div class="brand" aria-label="HiLex">Hi<span>Lex</span></div><span class="date">28 noiembrie 2026</span></header>
+<main>
+<p class="eyebrow">În curând, HiLex</p>
+<h1>Protecția ta legală.<span>Pentru viața reală.</span></h1>
+<p class="intro">Claritate juridică pentru românii din UK.<br>Resurse în română, pentru întrebările tale.</p>
+<div class="countdown" id="countdown" role="status" aria-live="polite"><div class="number" id="days">28</div><div class="unit" id="unit">noiembrie · ziua lansării</div></div>
+<p class="launch-date" id="launch-label">Ne vedem pe 28 noiembrie.</p>
+<a class="follow" href="https://www.instagram.com/hilex.uk/" target="_blank" rel="noopener noreferrer">Urmărește lansarea pe Instagram ↗</a>
+<p class="expertise">Cu expertiza Forest &amp; Co Solicitors</p>
+</main>
+<footer><span>© 2026 HiLex</span><a href="mailto:membership@hilex.co.uk">membership@hilex.co.uk</a></footer>
+</div>
+<script>
+// Calendar-day countdown in the UK. Opening is always a manual deployment.
+function updateCountdown(now = new Date()) {
+ const parts = new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/London',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(now);
+ const get = type => Number(parts.find(p => p.type === type).value);
+ const today = Date.UTC(get('year'), get('month')-1, get('day'));
+ const remaining = Math.max(0,Math.round((Date.UTC(2026,10,28)-today)/86400000));
+ const number = document.getElementById('days');
+ const unit = document.getElementById('unit');
+ const card = document.getElementById('countdown');
+ card.classList.toggle('today',remaining===0);
+ number.textContent = remaining > 0 ? String(remaining).padStart(2,'0') : 'În curând';
+ unit.textContent = remaining > 0 ? (remaining === 1 ? 'zi până la lansare' : 'zile până la lansare') : 'Pregătim deschiderea';
+ document.getElementById('launch-label').textContent = remaining > 0 ? 'Ne vedem pe 28 noiembrie.' : 'Anunțăm deschiderea pe Instagram.';
+}
+updateCountdown();setInterval(updateCountdown,60000);
+</script>
+</body>
+</html>

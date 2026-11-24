@@ -1,0 +1,16 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/contact",
+      "destination": "/contact.html",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/contact",
+      "destination": "https://membersaccess.hilex.co.uk/api/public-contact"
+    }
+  ]
+}
