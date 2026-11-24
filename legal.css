@@ -1,0 +1,11 @@
+/* Legal documents */
+.legal-main{max-width:850px;margin:60px auto 80px;padding:0 24px;color:#20243b;overflow-wrap:anywhere}
+.legal-main h1{font-size:clamp(30px,5vw,48px);line-height:1.12;margin:18px 0;color:var(--navy)}
+.legal-main h2{font-size:23px;line-height:1.35;margin:34px 0 14px;color:var(--navy)}
+.legal-main p,.legal-main li{font-size:17px;line-height:1.7;margin:0 0 14px}
+.legal-main a{text-decoration:underline;text-underline-offset:3px}
+.legal-main .legal-meta{color:#60647a;font-size:15px}
+.legal-nav{display:flex;gap:20px;flex-wrap:wrap;margin:26px 0 34px}
+.legal-main ul{padding-left:24px;list-style:disc}.legal-main li{padding-left:0}.legal-main li::before{display:none}
+@media(max-width:600px){.legal-main{margin:32px auto 48px;padding:0 20px}.legal-main p,.legal-main li{font-size:16px}.legal-main h2{font-size:21px}}
+@media print{.header,.footer,.legal-nav{display:none}.legal-main{max-width:none;margin:0;padding:0}.legal-main h2{break-after:avoid}.legal-main p{orphans:3;widows:3}}
